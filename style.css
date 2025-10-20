@@ -1,0 +1,313 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #fff;
+  overflow-x: hidden;
+  background: #1b1b1b;
+  position: relative;
+}
+
+/* ====== BEACH BACKGROUND ====== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(8px) brightness(60%);
+  z-index: -1;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.logo span {
+  color: #f4a261;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #f4a261;
+}
+
+/* ====== ACTIVE NAV LINK UNDERLINE ====== */
+.navbar nav a {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Create the underline */
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f4a261;
+  transition: width 0.3s ease;
+}
+
+/* Show underline on hover */
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* Keep underline visible for active page */
+.navbar nav a.active::after {
+  width: 100%;
+}
+
+.login-btn {
+  padding: 8px 18px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #f4a261;
+  border-color: #f4a261;
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.memorable {
+  color: #f4a261;
+}
+
+.hero-content p {
+  font-size: 1.1em;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.highlight {
+  color: #f4a261;
+  font-weight: bold;
+}
+
+.tour-btn {
+  padding: 10px 25px;
+  background: #f4a261;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tour-btn:hover {
+  background: #e76f51;
+}
+
+/* ====== BOOKING CARD ====== */
+.booking-section {
+  display: flex;
+  justify-content: center;
+  margin-top: -60px;
+  z-index: 2;
+  position: relative;
+}
+
+.booking-card {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 15px;
+  gap: 25px;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.booking-item label {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.booking-item .value {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.search-btn {
+  padding: 12px 25px;
+  background: #f4a261;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #e76f51;
+}
+
+/* ====== POPUP ====== */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.popup:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-content {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  margin: 100px auto;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.popup-content h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.login-submit {
+  width: 100%;
+  padding: 10px;
+  background: #f4a261;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-submit:hover {
+  background: #e76f51;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* ====== PURE CSS SLIDE-UP TRANSITION (NO LOADING, NO REDIRECT) ====== */
+.page-transition {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1b1b1b;
+  z-index: 9999;
+  transition: bottom 0.8s ease-in-out;
+}
+
+/* Trigger animation when Start Exploring is clicked */
+.page-transition:target {
+  bottom: 0;
+}
+
+/* Optional fade-in effect for smoother entry */
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page-transition:target {
+  animation: fadeInOverlay 0.8s ease-in-out;
+}
