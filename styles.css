@@ -1,0 +1,237 @@
+/* ====== GENERAL STYLES ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(8px) brightness(60%);
+  z-index: -1;
+}
+
+/* Fade-in animation on load */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== SLIDESHOW BACKGROUND ====== */
+.slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideShow 32s infinite;
+}
+
+/* You can replace the images below with your own */
+.slide1 {
+  background-image: url('images/boracay.jpg');
+  animation-delay: 0s;
+}
+
+.slide2 {
+  background-image: url('images/nacpan.jpg');
+  animation-delay: 8s;
+}
+
+.slide3 {
+  background-image: url('images/maribago.jpg');
+  animation-delay: 16s;
+}
+
+.slide4 {
+  background-image: url('images/puka.jpg');
+  animation-delay: 24s;
+}
+
+@keyframes slideShow {
+  0%, 25% { opacity: 1; }
+  30%, 100% { opacity: 0; }
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #f4a261;
+}
+
+/* ====== ACTIVE NAV LINK UNDERLINE ====== */
+.navbar nav a {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Create the underline */
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f4a261;
+  transition: width 0.3s ease;
+}
+
+/* Show underline on hover */
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* Keep underline visible for active page */
+.navbar nav a.active::after {
+  width: 100%;
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 10%;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  max-width: 900px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  animation: heroFade 1.2s ease;
+}
+
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content .memorable {
+  color: #f4a261;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* ====== RECOMMENDATIONS ====== */
+.recommendations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.recommendation-item {
+  background: white;
+  color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommendation-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.recommendation-item h3 {
+  color: #f4a261;
+  margin-bottom: 10px;
+}
+
+.recommendation-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .navbar nav a {
+    margin: 8px;
+  }
+
+  .hero-content {
+    padding: 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .recommendations {
+    grid-template-columns: 1fr;
+  }
+}
