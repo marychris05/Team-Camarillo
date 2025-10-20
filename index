@@ -1,93 +1,44 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PH Beaches – Dashboard</title>
+  <title>Philippine Tourist Spots</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <!-- Slideshow Background -->
+  <div class="slideshow">
+    <div class="slide slide1"></div>
+    <div class="slide slide2"></div>
+    <div class="slide slide3"></div>
+    <div class="slide slide4"></div>
+  </div>
+
+  <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">PH<span>.Beaches</span></div>
+    <div class="logo">Philippine Tourist Spots</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Top Beaches</a>
-      <a href="#">Map</a>
+      <!-- 👇 'active' added to the current page -->
+      <a href="index.html" class="active">Home</a>
+      <a href="recommended.html">Recommended Places</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a href="index.html" class="logout-btn">Logout</a>
   </header>
 
- 
-  <main class="dashboard-content">
-    <h1>Welcome to Paradise!</h1>
-    <p>Explore the most breathtaking beaches in the Philippines.</p>
+  <!-- Main Content -->
+  <main class="content">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Explore <span class="memorable">memorable</span> tourist spots across the Philippines</h1>
+        <p>Discover breathtaking destinations — from pristine beaches to mountain retreats — all around the country.</p>
 
-    <div class="places-grid">
-      <div class="place-card">
-        <img src=" " alt="White Beach Boracay">
-        <h3>White Beach – Boracay</h3>
-        <p>Powdery white sand and vibrant nightlife.</p>
-        <button>View More</button>
+        <!-- Start Exploring Button -->
+        <a href="transition-up.html" class="tour-btn">Start Exploring</a>
       </div>
-
-      <div class="place-card">
-        <img src=" " alt="El Nido Palawan">
-        <h3>El Nido – Palawan</h3>
-        <p>Turquoise lagoons and limestone cliffs.</p>
-        <button>View More</button>
-      </div>
-
-      <div class="place-card">
-        <img src=" " alt="Nacpan Beach">
-        <h3>Nacpan Beach – Palawan</h3>
-        <p>Golden sand and peaceful twin shores.</p>
-        <button>View More</button>
-      </div>
-      
-      <div class="place-card">
-  <img src=" " alt="Alona Beach">
-  <h3>Alona Beach – Bohol</h3>
-  <p>Diving, dolphins, and coral reefs in a relaxed setting.</p>
-  <button>View More</button>
-</div>
-
-<div class="place-card">
-  <img src=" " alt="Kota Beach">
-  <h3>Kota Beach – Bantayan Island</h3>
-  <p>Shallow turquoise waters and scenic sandbars.</p>
-  <button>View More</button>
-</div>
-
-<div class="place-card">
-  <img src=" " alt="Malapascua Island">
-  <h3>Malapascua Island – Cebu</h3>
-  <p>Thresher shark diving and white sand coves.</p>
-  <button>View More</button>
-</div>
-
-<div class="place-card">
-  <img src=" " alt="Saud Beach">
-  <h3>Saud Beach – Pagudpud</h3>
-  <p>Quiet charm and stunning northern sunsets.</p>
-  <button>View More</button>
-</div>
-
-<div class="place-card">
-  <img src=" " alt="Kalanggaman Island">
-  <h3>Kalanggaman Island – Leyte</h3>
-  <p>Long sandbar and crystal-clear waters.</p>
-  <button>View More</button>
-</div>
-
-<div class="place-card">
-  <img src=" " alt="Pink Beach">
-  <h3>Pink Beach – Zamboanga</h3>
-  <p>Rare pink sand from crushed red coral.</p>
-  <button>View More</button>
-</div>
-
-    </div>
+    </section>
   </main>
 </body>
 </html>
