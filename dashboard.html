@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PH Beaches – Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <meta name="description" content="Discover the most beautiful beaches in the Philippines — from Boracay to Palawan and beyond.">
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" role="banner">
+    <div class="logo">PH<span>.Beaches</span></div>
+    <div class="button-section"></div>
+    <nav role="navigation">
+      <a href="transition-down.html">Home</a>
+      <a href="dashboard.html" class="active">Beaches</a>
+      <a href="top-beaches.html" class="main-btn">Top Beaches</a>
+    </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="dashboard-content" role="main">
+    <h1>Welcome to Paradise!</h1>
+    <p>Explore the most breathtaking beaches in the Philippines.</p>
+
+    <!-- ===== SEARCH BAR ===== -->
+    <section class="search-section">
+      <form class="search-form" action="#">
+        <input type="search" placeholder="Search for a beach..." aria-label="Search for a beach">
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+  <section class="dashboard-content">
+    <h1>Top Beaches Around the World</h1>
+    <p>Discover the world’s most stunning beaches — turquoise waters, white sands, and unforgettable sunsets.</p>
+
+    <div class="places-grid">
+      <article class="place">
+        <input type="checkbox" id="beach1" class="expand-toggle" hidden>
+        <label for="beach1" class="place-card">
+          <img src="OIP (1).webp" alt="White Beach">
+          <h3>White Beach – Boracay</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach1" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="OIP (1).webp" alt="">
+                  <img src="OIP (2).webp" alt="">
+                  <img src="OIP (3).webp" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>White Beach – Boracay</h2>
+                <p>White Beach is the crown jewel of Philippine tourism, famous for its soft white sand, clear blue water, and breathtaking sunsets. Divided into Stations 1–3, the beach offers both luxury and adventure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Nacpan Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach2" class="expand-toggle" hidden>
+        <label for="beach2" class="place-card">
+          <img src="Nacpan-Beach-11.jpg" loading="lazy" alt="Nacpan Beach in El Nido with palm trees and golden sand">
+          <h3>Nacpan Beach – El Nido, Palawan</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach2" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="Nacpan-Beach-11.jpg" alt="">
+                  <img src="Nacpan-Beach-12.jpg" alt="">
+                  <img src="Nacpan-beach-El-Nido-Palawan-Philippines.webp" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Nacpan Beach – El Nido, Palawan</h2>
+                <p>Nacpan Beach is known for its 4 km stretch of golden sand, palm trees, and clear blue waters. Peaceful and scenic, it’s one of El Nido’s most stunning natural spots.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Entalula Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach3" class="expand-toggle" hidden>
+        <label for="beach3" class="place-card">
+          <img src="947234-7.jpg" loading="lazy" alt="Entalula Beach with limestone cliffs">
+          <h3>Entalula Beach – El Nido, Palawan</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach3" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="947234-7.jpg" alt="">
+                  <img src="entalula-beach-el-nido-palawan.jpg" alt="">
+                  <img src="Entalula-Island-3-768x511.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Entalula Beach – El Nido, Palawan</h2>
+                <p>Entalula Beach is a secluded paradise surrounded by dramatic cliffs and crystal-clear water — perfect for relaxation and photography.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Alona Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach4" class="expand-toggle" hidden>
+        <label for="beach4" class="place-card">
+          <img src="e5aefd61-98d9-4ba5-b5e7-1e6d6f49baf2.avif" loading="lazy" alt="Alona Beach in Bohol with clear blue water">
+          <h3>Alona Beach – Panglao Island, Bohol</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach4" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="e5aefd61-98d9-4ba5-b5e7-1e6d6f49baf2.avif" alt="">
+                  <img src="Alona-Beach-Panglao-Island-Bohol.webp" alt="">
+                  <img src="DSC09407.JPG" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Alona Beach – Panglao Island, Bohol</h2>
+                <p>Alona Beach combines white sand beauty with exciting nightlife and diving opportunities. It’s a top destination in the Visayas region.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Cloud 9 -->
+      <article class="place">
+        <input type="checkbox" id="beach5" class="expand-toggle" hidden>
+        <label for="beach5" class="place-card">
+          <img src="Cloud-9-Siargao-.jpg" loading="lazy" alt="Cloud 9 surf spot in Siargao Island">
+          <h3>Cloud 9 – Siargao Island, Surigao del Norte</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach5" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="Cloud-9-Siargao-.jpg" alt="">
+                  <img src="M45386_uxga.jpg" alt="">
+                  <img src="cc7f7a2a10a3d849b51a705f2c8c28f7.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Cloud 9 – Siargao Island, Surigao del Norte</h2>
+                <p>Cloud 9 is the surfing capital of the Philippines, famous for its perfect waves and relaxed island atmosphere.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+            <!-- 6. Puka Shell Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach6" class="expand-toggle" hidden>
+        <label for="beach6" class="place-card">
+          <img src="8643418979_b583348535_b_20190727225424.jpg" loading="lazy" alt="Puka Shell Beach in Boracay with shells and gentle waves">
+          <h3>Puka Shell Beach – Boracay, Aklan</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach6" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="8643418979_b583348535_b_20190727225424.jpg" alt="">
+                  <img src="aerial-view-boracay-island-philippines-puka-shell-beach-sunny-day-184802381.webp" alt="">
+                  <img src="photo1jpg.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Puka Shell Beach – Boracay, Aklan</h2>
+                <p>Puka Shell Beach is quieter than White Beach, known for its natural puka shells and peaceful, less-crowded atmosphere perfect for sunset watching.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7. Bon Bon Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach7" class="expand-toggle" hidden>
+        <label for="beach7" class="place-card">
+          <img src="bon-bon-beach-drone-shot.jpg" loading="lazy" alt="Bon Bon Beach sandbar in Romblon">
+          <h3>Bon Bon Beach – Romblon, Romblon</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach7" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="bon-bon-beach-drone-shot.jpg" alt="">
+                  <img src="bonbon-beach-romblon-6.jpg" alt="">
+                  <img src="Romblon-Island-1024x682.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Bon Bon Beach – Romblon, Romblon</h2>
+                <p>Bon Bon Beach features a unique sandbar connecting to Bang-og Island, offering crystal-clear waters ideal for wading and beachcombing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8. Paradise Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach8" class="expand-toggle" hidden>
+        <label for="beach8" class="place-card">
+          <img src="istockphoto-1438884583-612x612.jpg" loading="lazy" alt="Paradise Beach in Bantayan Island">
+          <h3>Paradise Beach – Bantayan Island, Cebu</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach8" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="istockphoto-1438884583-612x612.jpg" alt="">
+                  <img src="paradise-beach-bantayan-4.jpg" alt="">
+                  <img src="Paradise-Beach-Bantayan-8.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Paradise Beach – Bantayan Island, Cebu</h2>
+                <p>A secluded beach with soft white sand and gentle waves, Paradise Beach lives up to its name as a peaceful getaway on Bantayan Island.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9. Banul Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach9" class="expand-toggle" hidden>
+        <label for="beach9" class="place-card">
+          <img src="18e0apknwfa11.webp" loading="lazy" alt="Banul Beach limestone cliffs in Coron">
+          <h3>Banul Beach – Coron, Palawan</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach9" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="18e0apknwfa11.webp" alt="">
+                  <img src="banul-beach-coron-palawan.jpg" alt="">
+                  <img src="6ff4c78b7e6d7cb630188ca1969b8c7f.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Banul Beach – Coron, Palawan</h2>
+                <p>Banul Beach is a small yet stunning cove surrounded by dramatic limestone cliffs — perfect for swimming and island-hopping tours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10. Anawangin Cove -->
+      <article class="place">
+        <input type="checkbox" id="beach10" class="expand-toggle" hidden>
+        <label for="beach10" class="place-card">
+          <img src="IMG_20230519_093158.jpg" loading="lazy" alt="Anawangin Cove in Zambales with pine trees and beach">
+          <h3>Anawangin Cove – San Antonio, Zambales</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach10" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="IMG_20230519_093158.jpg" alt="">
+                  <img src="DSC_8306.JPG" alt="">
+                  <img src="Anawangin-Cove.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Anawangin Cove – San Antonio, Zambales</h2>
+                <p>Anawangin Cove is a volcanic ash-formed beach fringed with Agoho trees. It’s a popular camping site for nature lovers and adventurers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 11. Laiya Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach11" class="expand-toggle" hidden>
+        <label for="beach11" class="place-card">
+          <img src="IMG_3036-2.jpg" loading="lazy" alt="Laiya Beach in Batangas with calm water">
+          <h3>Laiya Beach – San Juan, Batangas</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach11" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="IMG_3036-2.jpg" alt="">
+                  <img src="camp-laiya-beach-farm-resort.jpg" alt="">
+                  <img src="R.jfif" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Laiya Beach – San Juan, Batangas</h2>
+                <p>Just a few hours from Manila, Laiya Beach offers soft sand, family-friendly resorts, and a relaxed escape from city life.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 12. Port Barton -->
+      <article class="place">
+        <input type="checkbox" id="beach12" class="expand-toggle" hidden>
+        <label for="beach12" class="place-card">
+          <img src="Port-Barton-Travel-Guide-17.jpg" loading="lazy" alt="Port Barton in San Vicente Palawan">
+          <h3>Port Barton – San Vicente, Palawan</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach12" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="Port-Barton-Travel-Guide-17.jpg" alt="">
+                  <img src="secret-paradise-resort.jpg" alt="">
+                  <img src="5d864545f0c5f3f16281fe55_port barton island.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Port Barton – San Vicente, Palawan</h2>
+                <p>Known for its laid-back atmosphere and island-hopping tours, Port Barton is a quiet beach town nestled between El Nido and Puerto Princesa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 13. Saud Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach13" class="expand-toggle" hidden>
+        <label for="beach13" class="place-card">
+          <img src="5856809284_05168d7f2a_z.jpg" loading="lazy" alt="Saud Beach in Pagudpud with coconut trees">
+          <h3>Saud Beach – Pagudpud, Ilocos Norte</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach13" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="5856809284_05168d7f2a_z.jpg" alt="">
+                  <img src="7-pagudpud-saud-beach-banner.jpg" alt="">
+                  <img src="R (1).jfif" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Saud Beach – Pagudpud, Ilocos Norte</h2>
+                <p>Saud Beach is known for its long stretch of fine sand and crystal-clear waters, often dubbed “the Boracay of the North.”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 14. Mahabang Buhangin -->
+      <article class="place">
+        <input type="checkbox" id="beach14" class="expand-toggle" hidden>
+        <label for="beach14" class="place-card">
+          <img src="81617e603dc28b6969a3e08bd9e307a0.jpg" loading="lazy" alt="Calaguas Island white sand beach">
+          <h3>Mahabang Buhangin – Calaguas Island, Camarines Norte</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach14" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="81617e603dc28b6969a3e08bd9e307a0.jpg" alt="">
+                  <img src="4517594802_60a6376594_b.jpg" alt="">
+                  <img src="IMG_9789.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Mahabang Buhangin – Calaguas Island, Camarines Norte</h2>
+                <p>With powdery white sand and turquoise waters, Mahabang Buhangin remains an unspoiled tropical paradise ideal for camping and swimming.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 15. Dahican Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach15" class="expand-toggle" hidden>
+        <label for="beach15" class="place-card">
+          <img src="Dahican-Beach-Mati-Davao-Oriental-Mindanao.jpg" loading="lazy" alt="Dahican Beach surf waves in Mati Davao Oriental">
+          <h3>Dahican Beach – Mati, Davao Oriental</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach15" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="Dahican-Beach-Mati-Davao-Oriental-Mindanao.jpg" alt="">
+                  <img src="dahican-beach.jpg" alt="">
+                  <img src="Mati Davao Dahican beach 2.JPG" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Dahican Beach – Mati, Davao Oriental</h2>
+                <p>Dahican Beach is a 7-km stretch loved by skimboarders, surfers, and turtle watchers — a must-see in Mindanao.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 16. White Island -->
+      <article class="place">
+        <input type="checkbox" id="beach16" class="expand-toggle" hidden>
+        <label for="beach16" class="place-card">
+          <img src="Captivating-White-Island-in-Camiguin-Copyright-to-Project-LUPAD-4.jpg" loading="lazy" alt="White Island sandbar in Camiguin with volcano view">
+          <h3>White Island – Camiguin</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach16" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="Captivating-White-Island-in-Camiguin-Copyright-to-Project-LUPAD-4.jpg" alt="">
+                  <img src="white-island-camiguin-12.jpg" alt="">
+                  <img src="R (2).jfif" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>White Island – Camiguin</h2>
+                <p>White Island is a shifting sandbar just off Camiguin’s coast, offering panoramic views of Mt. Hibok-Hibok and crystal-clear waters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 17. Canigao Island -->
+      <article class="place">
+        <input type="checkbox" id="beach17" class="expand-toggle" hidden>
+        <label for="beach17" class="place-card">
+          <img src="b7c73ecb05bcaf283c5bd60ba6df61ef.jpg" loading="lazy" alt="Canigao Island beach in Leyte">
+          <h3>Canigao Island – Matalom, Leyte</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach17" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="b7c73ecb05bcaf283c5bd60ba6df61ef.jpg" alt="">
+                  <img src="OIP (4).webp" alt="">
+                  <img src="108c3b001653e4fe19262291be059023.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Canigao Island – Matalom, Leyte</h2>
+                <p>A small island with white sand and turquoise water, Canigao is perfect for day trips and snorkeling adventures.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 18. Pink Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach18" class="expand-toggle" hidden>
+        <label for="beach18" class="place-card">
+          <img src="c9.jpg" loading="lazy" alt="Pink Beach in Zamboanga">
+          <h3>Pink Beach – Sta. Cruz Island, Zamboanga City</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach18" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="c9.jpg" alt="">
+                  <img src="sta-cruz-island-4.jpg" alt="">
+                  <img src="DJI_0576.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Pink Beach – Sta. Cruz Island, Zamboanga City</h2>
+                <p>Sta. Cruz Island is famous for its naturally pink-tinted sand caused by crushed red corals — a rare gem in the Philippines.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 19. Balabac Islands -->
+      <article class="place">
+        <input type="checkbox" id="beach19" class="expand-toggle" hidden>
+        <label for="beach19" class="place-card">
+          <img src="Canimeran-island-Balabac-Palawan-island-hopping-boat-tour-package-1536x845.jpg" loading="lazy" alt="Balabac Islands Palawan turquoise lagoon">
+          <h3>Balabac Islands – Southern Palawan</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach19" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="Canimeran-island-Balabac-Palawan-island-hopping-boat-tour-package-1536x845.jpg" alt="">
+                  <img src="43ce38_d92a203b9df04cccaa122ee36c3629e2~mv2.avif" alt="">
+                  <img src="43ce38_1e3c5e75374c477db91a75b680ff5077~mv2.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Balabac Islands – Southern Palawan</h2>
+                <p>Balabac is a remote paradise of sandbars, coral reefs, and crystal lagoons — among the most pristine in the entire archipelago.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 20. Long Beach -->
+      <article class="place">
+        <input type="checkbox" id="beach20" class="expand-toggle" hidden>
+        <label for="beach20" class="place-card">
+          <img src="nacpan-beach-el-nido-palawan.jpg" loading="lazy" alt="Long Beach in San Vicente Palawan">
+          <h3>Long Beach – San Vicente, Palawan</h3>
+          <span class="view-more">View More</span>
+        </label>
+        <div class="popup-overlay">
+          <div class="popup">
+            <div class="popup-content">
+              <label for="beach20" class="close-x">&times;</label>
+              <div class="popup-left">
+                <div class="slideshow">
+                  <img src="nacpan-beach-el-nido-palawan.jpg" alt="">
+                  <img src="traditional-fishing-village-palawan-island-philippines_328046-14856.jpg" alt="">
+                  <img src="diapela-beach-el-nido-philippines-palawan-rocky-coastline-clear-ocean-waves-diapela-beach-el-nido-palawan-philippines-309901145.webp" alt="">
+                </div>
+              </div>
+              <div class="popup-right">
+                <h2>Long Beach – San Vicente, Palawan</h2>
+                <p>Stretching over 14 kilometers, Long Beach is the longest white sand beach in the Philippines, offering unspoiled coastal beauty and peace.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 PH Beaches. All rights reserved.</p>
+  </footer>
+</body>
+</html>
