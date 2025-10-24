@@ -25,16 +25,11 @@ The **Philippine Tourist Spots** website aims to promote local tourism by highli
   - **Puka Shell Beach** — located in Boracay, known for its natural charm and less crowded environment.  
 - Each spot includes an illustration and a short description.
 
-### 3. **Explore Page (explore.html)**
-- Showcases **many other beaches** found across the Philippines.  
-- Contains **descriptions only**, highlighting their unique features, natural beauty, and cultural significance.  
-- Aims to encourage visitors to discover more destinations beyond the most well-known ones.
-
-### 4. **About Page (about.html)**
+### 3. **About Page (about.html)**
 - Provides background information about the creators or the purpose of the website.  
 - May include details about the motivation behind the project and its goals.
 
-### 5. **Contact Page (contact.html)**
+### 4. **Contact Page (contact.html)**
 - Contains contact information or a simple form for visitors who want to reach out.  
 - Can include email or social media links.
 
