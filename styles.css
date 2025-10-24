@@ -6,6 +6,13 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ====== BACKGROUND / SLIDESHOW ====== */
 body::before {
   content: "";
   position: fixed;
@@ -22,16 +29,9 @@ body::before {
   z-index: -1;
 }
 
-/* Fade-in animation on load */
 @keyframes fadeInPage {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ====== SLIDESHOW BACKGROUND ====== */
@@ -55,26 +55,10 @@ body::before {
   animation: slideShow 32s infinite;
 }
 
-/* You can replace the images below with your own */
-.slide1 {
-  background-image: url('images/boracay.jpg');
-  animation-delay: 0s;
-}
-
-.slide2 {
-  background-image: url('images/nacpan.jpg');
-  animation-delay: 8s;
-}
-
-.slide3 {
-  background-image: url('images/maribago.jpg');
-  animation-delay: 16s;
-}
-
-.slide4 {
-  background-image: url('images/puka.jpg');
-  animation-delay: 24s;
-}
+.slide1 { background-image: url('images/boracay.jpg'); animation-delay: 0s; }
+.slide2 { background-image: url('images/nacpan.jpg'); animation-delay: 8s; }
+.slide3 { background-image: url('images/maribago.jpg'); animation-delay: 16s; }
+.slide4 { background-image: url('images/puka.jpg'); animation-delay: 24s; }
 
 @keyframes slideShow {
   0%, 25% { opacity: 1; }
@@ -101,11 +85,19 @@ body::before {
   color: white;
 }
 
+/* NAV LINKS */
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+
 .navbar nav a {
   color: white;
   text-decoration: none;
   margin: 0 15px;
   transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
 }
 
 .navbar nav a:hover,
@@ -113,13 +105,6 @@ body::before {
   color: #f4a261;
 }
 
-/* ====== ACTIVE NAV LINK UNDERLINE ====== */
-.navbar nav a {
-  position: relative;
-  padding-bottom: 5px;
-}
-
-/* Create the underline */
 .navbar nav a::after {
   content: "";
   position: absolute;
@@ -131,12 +116,7 @@ body::before {
   transition: width 0.3s ease;
 }
 
-/* Show underline on hover */
-.navbar nav a:hover::after {
-  width: 100%;
-}
-
-/* Keep underline visible for active page */
+.navbar nav a:hover::after,
 .navbar nav a.active::after {
   width: 100%;
 }
@@ -186,6 +166,7 @@ body::before {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
+  padding: 40px 10%;
 }
 
 .recommendation-item {
@@ -212,19 +193,48 @@ body::before {
   line-height: 1.5;
 }
 
+/* ====== HAMBURGER MENU (CSS ONLY) ====== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Checkbox Hack */
+#menu-checkbox {
+  display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#menu-checkbox:checked ~ .menu-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-checkbox:checked ~ .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-checkbox:checked ~ .menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* ====== RESPONSIVE DESIGN ====== */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navbar {
-    flex-direction: column;
-    padding: 10px 20px;
-  }
-
-  .navbar nav a {
-    margin: 8px;
-  }
-
-  .hero-content {
-    padding: 25px;
+    padding: 15px 30px;
   }
 
   .hero-content h1 {
@@ -232,6 +242,73 @@ body::before {
   }
 
   .recommendations {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px 25px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px 0;
+    border-radius: 10px;
+  }
+
+  .navbar nav a {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 80px 5%;
+  }
+
+  .hero-content {
+    padding: 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .recommendations {
     grid-template-columns: 1fr;
+    padding: 30px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .recommendation-item {
+    padding: 15px;
+  }
+
+  .recommendation-item h3 {
+    font-size: 1rem;
   }
 }
