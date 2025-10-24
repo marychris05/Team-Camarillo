@@ -140,14 +140,6 @@ On the coast of San Vicente, Palawan, this beach features one of the longest whi
 **Reference:** [Long Beach San Vicente guide](https://www.explorepalawan.ph/long-beach-san-vicente/)
 
 ---
-
-## 📝 Notes
-- The descriptions are brief and suitable for inclusion in your website’s *Explore Page*.  
-- Reference links are provided for further reading and source verification.  
-- You can format these into HTML sections or cards for your project design.
-
-
----
 ## 👥 Members
 - Riza Ann Amay 
 - James Kyle Camarillo 
