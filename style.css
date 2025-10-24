@@ -1,4 +1,6 @@
-
+/* =========================================================
+   BASE STYLES (Your original code, unchanged)
+   ========================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -69,6 +71,8 @@ body::before {
   color: #fff;
   text-decoration: none;
   transition: 0.3s;
+  position: relative;
+  padding-bottom: 5px;
 }
 
 .navbar nav a:hover,
@@ -76,13 +80,7 @@ body::before {
   color: #f4a261;
 }
 
-/* ====== ACTIVE NAV LINK UNDERLINE ====== */
-.navbar nav a {
-  position: relative;
-  padding-bottom: 5px;
-}
-
-/* Create the underline */
+/* Active link underline */
 .navbar nav a::after {
   content: "";
   position: absolute;
@@ -94,12 +92,7 @@ body::before {
   transition: width 0.3s ease;
 }
 
-/* Show underline on hover */
-.navbar nav a:hover::after {
-  width: 100%;
-}
-
-/* Keep underline visible for active page */
+.navbar nav a:hover::after,
 .navbar nav a.active::after {
   width: 100%;
 }
@@ -285,7 +278,7 @@ body::before {
   text-decoration: none;
 }
 
-/* ====== PURE CSS SLIDE-UP TRANSITION (NO LOADING, NO REDIRECT) ====== */
+/* ====== PAGE TRANSITION ====== */
 .page-transition {
   position: fixed;
   bottom: -100%;
@@ -297,17 +290,132 @@ body::before {
   transition: bottom 0.8s ease-in-out;
 }
 
-/* Trigger animation when Start Exploring is clicked */
 .page-transition:target {
   bottom: 0;
+  animation: fadeInOverlay 0.8s ease-in-out;
 }
 
-/* Optional fade-in effect for smoother entry */
 @keyframes fadeInOverlay {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-.page-transition:target {
-  animation: fadeInOverlay 0.8s ease-in-out;
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* ====== Tablets (≤ 992px) ====== */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .navbar nav a {
+    margin: 0 10px;
+    font-size: 0.95em;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2em;
+  }
+
+  .booking-card {
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .booking-item {
+    flex: 1 1 45%;
+  }
+
+  .popup-content {
+    width: 80%;
+    margin-top: 80px;
+  }
+}
+
+/* ====== Mobile (≤ 768px) ====== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 25px;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .navbar nav a {
+    margin: 5px 10px;
+    font-size: 0.9em;
+  }
+
+  .hero {
+    height: 65vh;
+    padding: 0 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+    max-width: 90%;
+  }
+
+  .booking-section {
+    margin-top: 20px;
+  }
+
+  .booking-card {
+    flex-direction: column;
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .search-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .popup-content {
+    width: 90%;
+    margin-top: 100px;
+  }
+}
+
+/* ====== Small Mobile (≤ 480px) ====== */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5em;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5em;
+  }
+
+  .hero-content p {
+    font-size: 0.9em;
+  }
+
+  .tour-btn {
+    width: 100%;
+  }
+
+  .booking-card {
+    gap: 10px;
+  }
+
+  .booking-item .value {
+    font-size: 1em;
+  }
+
+  .popup-content {
+    padding: 20px;
+  }
 }
