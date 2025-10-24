@@ -36,8 +36,8 @@ The **Philippine Tourist Spots** website aims to promote local tourism by highli
 ---
 
 ## 🎨 Technologies Used
-- **HTML5** — for structuring the website content  
-- **CSS3** — for styling and layout design
+- **HTML - 8** — for structuring the website content  
+- **CSS - 5** — for styling and layout design
 
 ---
 
